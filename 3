@@ -1,0 +1,31 @@
+class Temperature {
+    private double temp;
+
+    public Temperature(double temp) throws Exception {
+        if (temp == 0) {
+            throw new Exception("Temperature is equal to zero");
+        }
+        this.temp = temp;
+    }
+
+    public double getTemp() {
+        return temp;
+    }
+
+    public void setTemp(double temp) throws Exception {
+        if (temp == 0) {
+            throw new Exception("Temperature is equal to zero");
+        }
+        this.temp = temp;
+    }
+    public static void main(String[] args){
+    try {
+    Temperature t = new Temperature(20);
+    System.out.println(t.getTemp());
+    t.setTemp(0);
+    System.out.println(t.getTemp());
+} catch (Exception e) {
+    System.out.println(e.getMessage());
+}
+}
+}
